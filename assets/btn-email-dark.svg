@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="38" viewBox="0 0 110 38" role="img" aria-label="E-mail">
+<title>E-mail</title>
+<style>.sans{font-family:'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif}</style>
+<rect x="0.5" y="0.5" width="109" height="37" rx="19" fill="#111a14" stroke="#1e2a23"/>
+<rect x="16" y="13" width="17" height="12" rx="2" fill="none" stroke="#3fb950" stroke-width="1.6"/><path d="M16.8 14l7.7 6 7.7-6" fill="none" stroke="#3fb950" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="42" y="24" class="sans" font-size="14" font-weight="600" fill="#e6edf3">E-mail</text>
+</svg>

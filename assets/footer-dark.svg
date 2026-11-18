@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="96" viewBox="0 0 840 96" role="img" aria-label="Feito com café, código e carinho em Jandira, SP">
+<title>Feito com café, código e carinho em Jandira, SP</title>
+<style>
+  .sans{font-family:'Segoe UI', Inter, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', Arial, sans-serif} .mono{font-family:'JetBrains Mono', 'Cascadia Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  .in{opacity:0;animation:fadeUp .7s ease-out forwards}
+  
+  @keyframes beat{0%{stroke-dashoffset:900}60%,100%{stroke-dashoffset:0}}
+  .beat{stroke-dasharray:900;stroke-dashoffset:900;animation:beat 3.5s ease-in-out infinite}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;opacity:1!important}}
+</style>
+<rect x="0.5" y="0.5" width="839" height="95" rx="16" fill="#0d1117" stroke="#1e2a23"/>
+
+<path d="M40 38 L330 38 L350 34 L362 44 L378 12 L394 56 L406 38 L500 38 L800 38" fill="none" stroke="#30363d" stroke-width="2"/>
+<path class="beat" d="M40 38 L330 38 L350 34 L362 44 L378 12 L394 56 L406 38 L500 38 L800 38" fill="none" stroke="#3fb950" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="420" y="76" text-anchor="middle" class="mono" font-size="12.5" fill="#8b949e">feito com café, código e <tspan fill="#3fb950">♥</tspan> em Jandira, SP</text>
+</svg>

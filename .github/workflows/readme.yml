@@ -1,0 +1,42 @@
+name: Atualizar README
+
+on:
+  schedule:
+    - cron: "17 9 * * *" # todo dia às 06:17 (Brasília)
+  workflow_dispatch: # botão "Run workflow" na aba Actions
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Gerar SVGs
+        run: node scripts/build.mjs
+        env:
+          # Opcional: crie o secret STATS_TOKEN (token pessoal) para contar também contribuições privadas.
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+
+      - name: Commitar se algo mudou
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || (git commit -m "chore: atualiza estatísticas do README" && git push)
